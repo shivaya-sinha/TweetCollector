@@ -53,7 +53,7 @@ def get_all_tweets(screen_name):
 	with open('%s_tweets.csv' % screen_name, 'wb') as f:
 		writer = csv.writer(f)
 		writer.writerow(["id","created_at","text"])
-		
+		writer.writerows(outtweets)
 	
 	pass
 

@@ -17,7 +17,7 @@ def get_all_tweets(screen_name):
 	#authorize twitter, initialize tweepy
 	auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 	auth.set_access_token(access_key, access_secret)
-	
+	api = tweepy.API(auth)
 	
 	#initialize a list to hold all the tweepy Tweets
 	alltweets = []	
